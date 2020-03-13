@@ -20,7 +20,7 @@ It means that both partners need to have equal as possible git commits to the ma
 Equal as possible == no more than a 40/60 contribution from the respective partner’s user name (this will be different in the off chance of a third member)
 ___
 
-### ðŸ¤“ Resources Used
+### Resources Used
 Topic | Reference
 | --- | --- |
 limits.h | <br><p>https://www.tutorialspoint.com/c_standard_library/limits_h.htm<br></p>
