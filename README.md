@@ -1,6 +1,6 @@
 # 0x11. C - printf Group Project [Andrew and Mohamed]
 > Holberton School, Foundations Curiculum: Low-level Programming & Algorithm - Hatching out
- 
+
 ### Overview
 - printf project is a group project to implement a custom version of the C standard library printf() function during the first year at Holberton school.
 
