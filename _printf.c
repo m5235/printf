@@ -1,51 +1,48 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdarg.h>
-#include <string.h>
 #include "holberton.h"
-
+#include <stdio.h>
+#include <stdarg.h>
 /**
- * _printf - custom function to mimick C printf
-
+ * _printf - print a given string and its arguments
+ * @format: string
+ * Return: number of characters printed
  */
 
-int print (char * str, ...)
+int _printf(const char *format, ...)
 {
-	va_list vl;
-	int i = 0, j=0;
-	char buff[100]={0}, tmp[20];
-	va_start( vl, str );
+	va_list list;
+	unsigned int i = 0;
+	int (*print)(va_list);
+	int count = 0;
 
-	while (str && str[i])
+	if (format == NULL)
+		return (-1);
+
+	va_start(list, format);
+	for (i = 0; format[i] != '\0'; i++)
 	{
-		if(str[i] == '%'){
-			i++;
-			switch (str[i]) {
-			case 'c': {
-				buff[j] = (char)va_arg( vl, int );
-				j++;
-				break;
-			}
-			case 'd': {
-				itoa(va_arg( vl, int ), tmp, 10);
-				strcpy(&buff[j], tmp);
-				j += strlen(tmp);
-				break;
-			}
-			case 'x': {
-				itoa(va_arg( vl, int ), tmp, 16);
-				strcpy(&buff[j], tmp);
-				j += strlen(tmp);
-				break;
-			}
-			}
-		} else {
-			buff[j] =str[i];
-			j++;
+		if (format[i] != '%')
+		{
+			_putchar(format[i]);
+			count++;
 		}
+		else if (format[i] == '%' && format[i + 1] != '\0')
+		{
+			i++;
+
+				if (print == 0)
+				{
+					_putchar('%');
+					_putchar(format[i]);
+					count += 2;
+				}
+				else
+					count += print(list);
+			}
+		}
+		else
+			return (-1);
 		i++;
 	}
-	fwrite(buff, j, 1, stdout);
-	va_end(vl);
-	return j;
+	va_end(list);
+	return (count);
 }

@@ -3,8 +3,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
-#include <limits.h>
+
 
 int pr_char(va_list ap);
 
@@ -26,4 +25,7 @@ int non_prting(va_list ap);
 
 int pr_ptr(va_list ap);
 
+int _putchar(char c);
+
+int execute_function_call(char, va_list);
 #endif
