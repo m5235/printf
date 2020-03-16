@@ -1,5 +1,5 @@
 #include "holberton.h"	
-
+#include <unistd.h>
 /**	
  * _printf - prints a formatted string from input	
  * @format: string to be printed	
