@@ -2,7 +2,7 @@
 > Holberton School Foundations Curiculum: Low-level Programming & Algorithm - Hatching out
 
 ### Overview
-- printf project is a group project to implement a custom version of the C standard library printf() function during the first year at Holberton school.
+- printf project is a group project to implement custom version of the C standard library printf() function during the first year at Holberton school.
 
 ### Project Objective (Teamwork - Collaboration - Remote Work)
 Teamwork Makes the Dream Work. As you well know, collaboration is incredibly important - at Holberton, in tech, and life. Even though we know it’s important, it can be easy to find our own, individual rhythm of productivity at the expense of our partner’s (or partners’) participation.
