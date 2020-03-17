@@ -6,6 +6,7 @@
  *
  * Return: length of char
  */
+
 int pr_char(va_list ap)
 {
 	char c_hold = (char)va_arg(ap, int);
@@ -21,6 +22,7 @@ int pr_char(va_list ap)
  *
  * Return: length of string
  */
+
 int pr_str(va_list ap)
 {
 	char *c_ptr = va_arg(ap, char *);
