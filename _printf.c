@@ -1,51 +1,39 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdarg.h>
-#include <string.h>
 #include "holberton.h"
 
 /**
- * _printf - custom function to mimick C printf
-
+ * _printf - prints a formatted string from input
+ * @format: string to be printed
+ *
+ * Return: length of string
  */
-
-int print (char * str, ...)
+int _printf(const char *format, ...)
 {
-	va_list vl;
-	int i = 0, j=0;
-	char buff[100]={0}, tmp[20];
-	va_start( vl, str );
+	va_list ap;
+	int j = 0, k = 0;
 
-	while (str && str[i])
+	va_start(ap, format);
+	while (format[j] != '\0')
 	{
-		if(str[i] == '%'){
-			i++;
-			switch (str[i]) {
-			case 'c': {
-				buff[j] = (char)va_arg( vl, int );
-				j++;
-				break;
-			}
-			case 'd': {
-				itoa(va_arg( vl, int ), tmp, 10);
-				strcpy(&buff[j], tmp);
-				j += strlen(tmp);
-				break;
-			}
-			case 'x': {
-				itoa(va_arg( vl, int ), tmp, 16);
-				strcpy(&buff[j], tmp);
-				j += strlen(tmp);
-				break;
-			}
-			}
-		} else {
-			buff[j] =str[i];
+		if (format[j] == '%')
+		{
 			j++;
+			while (format[j] == ' ')
+				j++;
+			if (format[j] == 's')
+				k += pr_str(ap);
+			else if (format[j] == 'c')
+				k += pr_char(ap);
+			else if (format[j] == '%')
+				write(1, "%", 1);
+			else
+				write(1, &format[j - 1], 2);
+		} else
+		{
+			k++;
+			write(1, &format[j], 1);
 		}
-		i++;
+		j++;
 	}
-	fwrite(buff, j, 1, stdout);
-	va_end(vl);
-	return j;
+	va_end(ap);
+	return (k);
 }
