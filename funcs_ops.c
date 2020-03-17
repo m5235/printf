@@ -1,6 +1,6 @@
 #include "holberton.h"
 #include <unistd.h>
-
+#include <limits.h>
 
 
 
@@ -78,11 +78,11 @@ int pr_int(va_list ap)
 	}
 	while (i > 0)
 	{
-		k++;
-		digit = i / j;
-		i = i % j;
-		j = j / 10;
-		buffer[0] = digit + '0';
+			k++;
+			digit = i / j;
+			i = i % j;
+			j = j / 10;
+			buffer[0] = digit + '0';
 		if (_bool == 1)
 			i++;
 		_bool = 0;
