@@ -1,4 +1,4 @@
-# 0x11.. C - printf Group Project [Andrew and Mohamed]
+# 0x11 C - printf Group Project [Andrew and Mohamed]
 > Holberton School Foundations Curiculum: Low-level Programming & Algorithm - Hatching out
 
 ### Overview
