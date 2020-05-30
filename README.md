@@ -11,7 +11,7 @@ Inversely, you may encounter a project where your partner wants to take a backse
 
 These modes of project management (along with their derivatives) disservice your understanding and invaluable life skill of bringing another up to speed.
 
-In the spirit of wanting to hold you accountable, your group projects will include a heavily weighted expectation of equal contribution.
+In the spirit of wanting to hold you accountable, your group projects will include a heavily weighted expectation of equal contributions.
 
 ### “What does that mean?”
 
